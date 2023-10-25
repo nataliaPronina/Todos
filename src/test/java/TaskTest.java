@@ -8,12 +8,14 @@ public class TaskTest {
         boolean actual = simpleTask.matches("Позвонить");
         Assertions.assertTrue(actual);
     }
+
     @Test
     public void SimpleTaskNotMatches() {
         SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
         boolean actual = simpleTask.matches("мама");
         Assertions.assertFalse(actual);
     }
+
     @Test
     public void EpicMatches() {
         Epic epic = new Epic(5, new String[]{"Позвонить родителям"});
